@@ -8,10 +8,24 @@ import {
   StatusBar,
 } from 'react-native';
 
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 50,
+  },
+  bigBlue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red: {
+    color: 'red',
+  },
+});
+
 const Main = () => {
   return (
-    <View>
-      <Text> People Finder </Text>
+    <View style={styles.container}>
+      <Text style={styles.bigBlue}> People Finder </Text>
     </View>
   );
 };
