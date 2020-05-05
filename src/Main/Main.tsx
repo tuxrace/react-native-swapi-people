@@ -1,12 +1,5 @@
 import React, {memo} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
