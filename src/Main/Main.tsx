@@ -1,5 +1,12 @@
-import React, {memo} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import React, {memo, Fragment} from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  VirtualizedList,
+  FlatList,
+  TouchableOpacity,
+} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -8,18 +15,62 @@ const styles = StyleSheet.create({
   bigBlue: {
     color: 'blue',
     fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 32,
   },
-  red: {
-    color: 'red',
+  item: {
+    backgroundColor: '#0000ff',
+    height: 150,
+    justifyContent: 'center',
+    marginVertical: 8,
+    marginHorizontal: 16,
+    padding: 20,
+  },
+  itemText: {
+    color: 'white',
+    fontSize: 24,
   },
 });
 
-const Main = () => {
+const renderItem = ({item}) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.bigBlue}> People Finder </Text>
+    // <TouchableOpacity>
+    <View style={styles.item}>
+      <Text style={styles.itemText}> {item.name} </Text>
     </View>
+    // </TouchableOpacity>
+  );
+};
+
+const Main = () => {
+  const people = [
+    {
+      id: 1,
+      name: 'Tom',
+    },
+    {
+      id: 1,
+      name: 'Jim',
+    },
+    {
+      id: 1,
+      name: 'Ann',
+    },
+  ];
+  return (
+    <Fragment>
+      <View style={styles.container}>
+        <View>
+          <Text style={styles.bigBlue}> People Finder </Text>
+        </View>
+        <View>
+          <FlatList
+            data={people}
+            renderItem={renderItem}
+            keyExtractor={(item) => item.id}
+          />
+        </View>
+      </View>
+    </Fragment>
   );
 };
 
