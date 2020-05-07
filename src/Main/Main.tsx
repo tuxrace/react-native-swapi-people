@@ -41,6 +41,17 @@ const renderItem = ({item}) => {
   );
 };
 
+const getItemCount = () => {
+  return 7;
+};
+
+const getItem = (data, index) => {
+  return {
+    id: data[index].id,
+    name: data[index].name,
+  };
+};
+
 const Main = () => {
   const people = [
     {
@@ -48,12 +59,28 @@ const Main = () => {
       name: 'Tom',
     },
     {
-      id: 1,
+      id: 2,
       name: 'Jim',
     },
     {
-      id: 1,
+      id: 3,
       name: 'Ann',
+    },
+    {
+      id: 4,
+      name: 'Dan',
+    },
+    {
+      id: 5,
+      name: 'Ben',
+    },
+    {
+      id: 6,
+      name: 'Von',
+    },
+    {
+      id: 7,
+      name: 'Pam',
     },
   ];
   return (
@@ -63,10 +90,12 @@ const Main = () => {
           <Text style={styles.bigBlue}> People Finder </Text>
         </View>
         <View>
-          <FlatList
+          <VirtualizedList
             data={people}
             renderItem={renderItem}
             keyExtractor={(item) => item.id}
+            getItemCount={getItemCount}
+            getItem={getItem}
           />
         </View>
       </View>
