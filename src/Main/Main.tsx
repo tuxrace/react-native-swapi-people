@@ -1,12 +1,5 @@
 import React, {memo, Fragment} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  VirtualizedList,
-  FlatList,
-  TouchableOpacity,
-} from 'react-native';
+import {StyleSheet, View, Text, VirtualizedList, TextInput} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -88,6 +81,13 @@ const Main = () => {
       <View style={styles.container}>
         <View>
           <Text style={styles.bigBlue}> People Finder </Text>
+        </View>
+        <View>
+          <TextInput
+            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            onChangeText={() => {}}
+            value={''}
+          />
         </View>
         <View>
           <VirtualizedList
