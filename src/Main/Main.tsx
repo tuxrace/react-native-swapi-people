@@ -24,6 +24,11 @@ const styles = StyleSheet.create({
   },
 });
 
+interface People {
+  id: number;
+  name: string;
+}
+
 const renderItem = ({item}) => {
   return (
     // <TouchableOpacity>
@@ -46,7 +51,7 @@ const getItem = (data, index) => {
 };
 
 const Main = () => {
-  const people = [
+  const people: People[] = [
     {
       id: 1,
       name: 'Tom',
