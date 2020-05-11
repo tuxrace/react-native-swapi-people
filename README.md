@@ -5,7 +5,7 @@ A mobile app to find people information of star wars characthers using star wars
 npx react-native run-ios
 
 ## Technolgies Used
-React Native
-TypeScript
-IOS
-XCODE
+- React Native
+- TypeScript
+- IOS
+- XCODE
