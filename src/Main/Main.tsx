@@ -1,5 +1,5 @@
 import React, {memo, Fragment} from 'react';
-import {StyleSheet, View, Text, VirtualizedList, TextInput} from 'react-native';
+import {StyleSheet, View, Text, VirtualizedList, TextInput, Button} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -93,6 +93,7 @@ const Main = () => {
             onChangeText={() => {}}
             value={''}
           />
+          <Button title="Search" onPress={() => {}} />
         </View>
         <View>
           <VirtualizedList
