@@ -80,6 +80,10 @@ const Main = () => {
       id: 7,
       name: 'Pam',
     },
+    {
+      id: 8,
+      name: 'Ken',
+    },
   ];
   return (
     <Fragment>
