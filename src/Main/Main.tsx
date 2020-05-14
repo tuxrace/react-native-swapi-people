@@ -11,15 +11,24 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
   item: {
-    backgroundColor: '#0000ff',
+    backgroundColor: '#ffffff',
     height: 150,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     marginVertical: 8,
     marginHorizontal: 16,
-    padding: 20,
+    padding: 16,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    borderRadius: 16,
   },
   itemText: {
-    color: 'white',
+    color: '#000000',
     fontSize: 24,
   },
 });
