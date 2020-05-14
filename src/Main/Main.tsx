@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
   itemText: {
     color: '#000000',
     fontSize: 24,
+    fontWeight: 'bold',
   },
 });
 
