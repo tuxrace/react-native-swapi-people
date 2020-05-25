@@ -1,5 +1,5 @@
-import React, {memo, Fragment} from 'react';
-import {StyleSheet, View, Text, VirtualizedList, TextInput, Button} from 'react-native';
+import React, {memo, Fragment, useState} from 'react';
+import {StyleSheet, View, Text, VirtualizedList, TextInput, Button, Switch} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -61,6 +61,8 @@ const getItem = (data, index) => {
 };
 
 const Main = () => {
+  const [isEnabled, setIsEnabled] = useState<boolean>(false);
+  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
   const people: People[] = [
     {
       id: 1,
@@ -100,6 +102,15 @@ const Main = () => {
       <View style={styles.container}>
         <View>
           <Text style={styles.bigBlue}> People Finder </Text>
+        </View>
+        <View>
+        <Switch
+          trackColor={{ false: "#767577", true: "#81b0ff" }}
+          thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+        />
         </View>
         <View>
           <TextInput
