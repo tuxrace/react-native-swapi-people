@@ -45,6 +45,9 @@ const renderItem = ({item}) => {
       <View style={styles.item}>
         <Text style={styles.itemText}> {item.name} </Text>
       </View>
+      <View style={styles.item}>
+        <Text style={styles.itemText}> {item.name} </Text>
+      </View>
     </TouchableOpacity>
   );
 };
