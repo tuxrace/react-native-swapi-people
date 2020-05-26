@@ -1,5 +1,5 @@
 import React, {memo, Fragment, useState} from 'react';
-import {StyleSheet, View, Text, VirtualizedList, TextInput, Button, Switch} from 'react-native';
+import { StyleSheet, View, Text, VirtualizedList, TextInput, Button, Switch, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -41,11 +41,11 @@ interface People {
 
 const renderItem = ({item}) => {
   return (
-    // <TouchableOpacity>
-    <View style={styles.item}>
-      <Text style={styles.itemText}> {item.name} </Text>
-    </View>
-    // </TouchableOpacity>
+    <TouchableOpacity>
+      <View style={styles.item}>
+        <Text style={styles.itemText}> {item.name} </Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
